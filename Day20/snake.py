@@ -18,10 +18,7 @@ class Snake:
             self.add_segment(position)
             
     def extend(self):        
-        new_x = self.segments[-1].xcor()
-        new_y = self.segments[-1].ycor()
-        position = (new_x, new_y)
-        self.add_segment(position)
+        self.add_segment(self.segments[-1].position())
     
     def add_segment(self, position):
         segment = Turtle(shape="square")
@@ -30,13 +27,9 @@ class Snake:
         segment.goto(position)
         self.segments.append(segment)
     
-    
-    
     def move(self):
         for num in range(len(self.segments) - 1, 0, -1):
-            new_x = self.segments[num - 1].xcor()
-            new_y = self.segments[num - 1].ycor()
-            self.segments[num].goto(new_x, new_y)
+            self.segments[num].goto(self.segments[num - 1].position())
         self.head.forward(MOVE_DISTANCE)
         
     def up(self):
