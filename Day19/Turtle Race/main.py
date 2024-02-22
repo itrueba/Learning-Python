@@ -21,7 +21,6 @@ for index in range(0,6):
     new_turtle.shape("turtle")
     new_turtle.goto(-230, y_positions[index])
     turtle_list.append(new_turtle)
-    
 
     
 while is_race_on:
