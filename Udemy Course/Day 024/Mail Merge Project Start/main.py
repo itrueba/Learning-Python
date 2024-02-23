@@ -4,7 +4,7 @@
 with open("./Input/Names/invited_names.txt") as file:
     names = file.readlines()
 
-names = [elemento.strip() for elemento in names]
+names = [name.strip() for name in names]
 
 #Replace the [name] placeholder with the actual name.
 
