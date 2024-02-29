@@ -1,7 +1,6 @@
 
 # Using CSV
 
-"""
 import csv
 
 with open("weather_data.csv") as data_file:
@@ -16,8 +15,7 @@ with open("weather_data.csv") as data_file:
             day.append(row[0])
             temp.append(row[1])
             condition.append(row[2])
-"""
-
+            
 # Using Pandas 
 
 import pandas as pd 
@@ -57,3 +55,7 @@ data_dict = {
 
 data = pd.DataFrame(data_dict)
 data.to_csv("new_data.csv")
+
+
+
+
